@@ -508,6 +508,7 @@ GameObject:
   - component: {fileID: 1671487392}
   - component: {fileID: 1671487394}
   - component: {fileID: 1671487395}
+  - component: {fileID: 1671487396}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -648,6 +649,26 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1671487396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1671487386}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66fbd5ffe9b9d64da304996f1919f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _setResolution: 1
+  _width: 2590
+  _height: 504
+  _frameRate: 60
+  _allowSlowDown: 1
+  _codec: 0
+  _startTime: 0
+  _recordLength: 5
+  _shader: {fileID: 4800000, guid: a4bd3b00ad1ed53458ec6ff07694985e, type: 3}
 --- !u!1 &1890532615
 GameObject:
   m_ObjectHideFlags: 0

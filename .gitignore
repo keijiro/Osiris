@@ -8,3 +8,6 @@ Desktop.ini
 /Library
 /Temp
 /Render
+
+/Assets/StreamingAssets/FFmpegOut
+/Assets/StreamingAssets/FFmpegOut.meta
