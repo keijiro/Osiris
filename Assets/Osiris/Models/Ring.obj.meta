@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0340c35688277d848b81228cd550610c
+guid: 7b6606c2deab432419462bc8251a5458
 timeCreated: 1502514215
 licenseType: Pro
 ModelImporter:
@@ -8,15 +8,25 @@ ModelImporter:
     100000: //RootNode
     100002: default
     100004: Box
+    100006: Circle
+    100008: Ring
     400000: //RootNode
     400002: default
     400004: Box
+    400006: Circle
+    400008: Ring
     2300000: default
     2300002: Box
+    2300004: Circle
+    2300006: Ring
     3300000: default
     3300002: Box
+    3300004: Circle
+    3300006: Ring
     4300000: default
     4300002: Box
+    4300004: Circle
+    4300006: Ring
   materials:
     importMaterials: 0
     materialName: 0
@@ -63,8 +73,8 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
-    normalImportMode: 0
+    normalSmoothAngle: 40
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 0

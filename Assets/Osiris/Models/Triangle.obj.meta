@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 0340c35688277d848b81228cd550610c
-timeCreated: 1502514215
+guid: 7579cfcf207c40141bf4456d3d880f8d
+timeCreated: 1503669921
 licenseType: Pro
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: default
-    100004: Box
-    400000: //RootNode
-    400002: default
-    400004: Box
-    2300000: default
-    2300002: Box
-    3300000: default
-    3300002: Box
-    4300000: default
-    4300002: Box
+    100000: Triangle
+    100002: //RootNode
+    100004: default
+    400000: Triangle
+    400002: //RootNode
+    400004: default
+    2300000: Triangle
+    2300002: default
+    3300000: Triangle
+    3300002: default
+    4300000: Triangle
+    4300002: default
   materials:
     importMaterials: 0
     materialName: 0

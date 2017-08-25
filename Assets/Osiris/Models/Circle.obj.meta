@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0340c35688277d848b81228cd550610c
+guid: 057e0b66a472162488295b5d86fd33aa
 timeCreated: 1502514215
 licenseType: Pro
 ModelImporter:
@@ -8,15 +8,20 @@ ModelImporter:
     100000: //RootNode
     100002: default
     100004: Box
+    100006: Circle
     400000: //RootNode
     400002: default
     400004: Box
+    400006: Circle
     2300000: default
     2300002: Box
+    2300004: Circle
     3300000: default
     3300002: Box
+    3300004: Circle
     4300000: default
     4300002: Box
+    4300004: Circle
   materials:
     importMaterials: 0
     materialName: 0
