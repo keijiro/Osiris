@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.08680821, g: 0.086231336, b: 0.08822355, a: 1}
+  m_IndirectSpecularColor: {r: 0.058428764, g: 0.05797076, b: 0.059523948, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 22341380}
   - component: {fileID: 22341382}
   m_Layer: 0
-  m_Name: Noise Ball 2
+  m_Name: Noise Ball Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,12 +139,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _triangleCount: 128
   _triangleExtent: 0.15
-  _shuffleSpeed: 1.48
+  _shuffleSpeed: 1
   _noiseAmplitude: 12
-  _noiseFrequency: 4.69
-  _noiseMotion: {x: 0, y: 1, z: 0}
+  _noiseFrequency: 8
+  _noiseMotion: {x: 0, y: 0.8, z: 0}
   _material: {fileID: 2100000, guid: c83e4b50e5723d840b2a2f2265ecd3d3, type: 2}
-  _randomSeed: 12
+  _randomSeed: 9
   _compute: {fileID: 7200000, guid: c46e9a9e0802be04c9441ea4e5c75e51, type: 3}
 --- !u!4 &22341381
 Transform:
@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 61540763}
   - component: {fileID: 61540765}
   m_Layer: 0
-  m_Name: Noise Ball 3
+  m_Name: Noise Ball Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -206,12 +206,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _triangleCount: 128
   _triangleExtent: 0.15
-  _shuffleSpeed: 0.88
+  _shuffleSpeed: 1
   _noiseAmplitude: 14.04
-  _noiseFrequency: 4.69
-  _noiseMotion: {x: 0, y: -1, z: 0}
+  _noiseFrequency: 8
+  _noiseMotion: {x: 0, y: 0.8, z: 0}
   _material: {fileID: 2100000, guid: 380bb55d59f63904bb3ca8024d6deb5c, type: 2}
-  _randomSeed: 24
+  _randomSeed: 33
   _compute: {fileID: 7200000, guid: c46e9a9e0802be04c9441ea4e5c75e51, type: 3}
 --- !u!4 &61540764
 Transform:
@@ -293,6 +293,8 @@ PlayableDirector:
     value: {fileID: 872072406}
   - key: {fileID: 114114317273994160, guid: 9177e24159c1a3f4fa1f0fa12abb70a8, type: 2}
     value: {fileID: 1671487386}
+  - key: {fileID: 114342012270140890, guid: 9177e24159c1a3f4fa1f0fa12abb70a8, type: 2}
+    value: {fileID: 1890532615}
   m_ExposedReferences:
     m_References:
     - fda4c2d618d0e104b87ec9f30f6030f3: {fileID: 22341379}
@@ -434,7 +436,7 @@ GameObject:
   - component: {fileID: 1220308925}
   - component: {fileID: 1220308927}
   m_Layer: 0
-  m_Name: Noise Ball 1
+  m_Name: Noise Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -453,10 +455,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _triangleCount: 3000
   _triangleExtent: 0.15
-  _shuffleSpeed: 4
+  _shuffleSpeed: 1
   _noiseAmplitude: 12
-  _noiseFrequency: 2.7
-  _noiseMotion: {x: 0, y: 1, z: 0}
+  _noiseFrequency: 8
+  _noiseMotion: {x: 0, y: 0.8, z: 0}
   _material: {fileID: 2100000, guid: 183b67deabba2804cb29288cfa48f954, type: 2}
   _randomSeed: 0
   _compute: {fileID: 7200000, guid: c46e9a9e0802be04c9441ea4e5c75e51, type: 3}
@@ -657,6 +659,7 @@ GameObject:
   - component: {fileID: 1890532618}
   - component: {fileID: 1890532617}
   - component: {fileID: 1890532616}
+  - component: {fileID: 1890532620}
   m_Layer: 0
   m_Name: Shards
   m_TagString: Untagged
@@ -684,7 +687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _emitterCenter: {x: 0, y: 0, z: 0}
   _emitterSize: {x: 0.2, y: 0.2, z: 0.2}
-  _throttle: 1
+  _throttle: 0.353
   _life: 2
   _lifeRandomness: 0.6
   _initialVelocity: {x: 0, y: 0, z: 8}
@@ -749,3 +752,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1890532620
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1890532615}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
