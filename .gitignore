@@ -3,6 +3,9 @@ Thumbs.db
 Desktop.ini
 *.swp
 
+*.mp4
+*.mov
+
 /Extras/*.obj
 /Extras/backup
 /Library
