@@ -181,9 +181,12 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 114114589413535216, guid: 4e5991a8e4ac12e498cfe1994faad154, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 114602759486317462, guid: 4e5991a8e4ac12e498cfe1994faad154, type: 2}
+    value: {fileID: 1239170732}
   m_ExposedReferences:
     m_References:
     - fda4c2d618d0e104b87ec9f30f6030f3: {fileID: 0}
+    - 86ecae752530238499e57b93fd716e6b: {fileID: 911378993}
     - 49d947db9070b6b4f9a3dcedc63c3f99: {fileID: 0}
     - e5dfe9a411eb78a45a6d25cbadbbbaa8: {fileID: 0}
     - 831b9461639fd684d90eb6a264281707: {fileID: 872072406}
@@ -337,24 +340,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _template: {fileID: 11400000, guid: b8fde527e1ef29d4e99f1623ffd0cb99, type: 2}
-  _throttle: 0.198
-  _lineWidth: 0.05
-  _lineWidthRandomness: 0.5
+  _throttle: 0.6
+  _lineWidth: 0.03
+  _lineWidthRandomness: 0.3
   _twist: 2
   _flow: {x: 0, y: 0, z: 0}
-  _randomSeed: 36
-  _attractor: {fileID: 0}
+  _randomSeed: 88
+  _attractor: {fileID: 1433937288}
   _attractorPosition: {x: 0, y: 0, z: 0}
   _attractorRadius: 0.1
-  _forcePerDistance: 1
+  _forcePerDistance: 2
   _forceRandomness: 0.2
-  _drag: 2
-  _noiseAmplitude: 3.1
-  _noiseFrequency: 0.2
+  _drag: 1
+  _noiseAmplitude: 2
+  _noiseFrequency: 0.12
   _noiseSpread: 0.1
   _noiseSpeed: 0.1
   _swirlAmplitude: 0.1
-  _swirlFrequency: 0.2
+  _swirlFrequency: 0.1
   _kernels: {fileID: 4800000, guid: 1f76db9489dad1746b58e12bf468d5ca, type: 3}
   _defaultMaterial: {fileID: 2100000, guid: 6b2d3d1db33684e4ba8ac54f0155ca45, type: 2}
 --- !u!23 &516210894
@@ -612,8 +615,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 911378992}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.0014467548, y: 0.00029849354, z: -0.00074382575, w: 0.9999986}
+  m_LocalPosition: {x: 0.0038701254, y: 0.068525046, z: -0.04111498}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1671487391}
@@ -670,24 +673,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _template: {fileID: 11400000, guid: b8fde527e1ef29d4e99f1623ffd0cb99, type: 2}
-  _throttle: 0.198
-  _lineWidth: 0.05
-  _lineWidthRandomness: 0.5
+  _throttle: 0.6
+  _lineWidth: 0.03
+  _lineWidthRandomness: 0.3
   _twist: 2
   _flow: {x: 0, y: 0, z: 0}
-  _randomSeed: 78
-  _attractor: {fileID: 0}
+  _randomSeed: 149
+  _attractor: {fileID: 1807476402}
   _attractorPosition: {x: 0, y: 0, z: 0}
   _attractorRadius: 0.1
-  _forcePerDistance: 1
+  _forcePerDistance: 2
   _forceRandomness: 0.2
-  _drag: 2
-  _noiseAmplitude: 3.1
-  _noiseFrequency: 0.2
+  _drag: 1
+  _noiseAmplitude: 2
+  _noiseFrequency: 0.12
   _noiseSpread: 0.1
   _noiseSpeed: 0.1
   _swirlAmplitude: 0.1
-  _swirlFrequency: 0.2
+  _swirlFrequency: 0.1
   _kernels: {fileID: 4800000, guid: 1f76db9489dad1746b58e12bf468d5ca, type: 3}
   _defaultMaterial: {fileID: 2100000, guid: 6b2d3d1db33684e4ba8ac54f0155ca45, type: 2}
 --- !u!23 &1024232093
@@ -828,13 +831,14 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1239170733}
+  - component: {fileID: 1239170734}
   m_Layer: 0
   m_Name: Ribbon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1239170733
 Transform:
   m_ObjectHideFlags: 0
@@ -847,9 +851,28 @@ Transform:
   m_Children:
   - {fileID: 516210891}
   - {fileID: 1024232090}
+  - {fileID: 1433937288}
+  - {fileID: 1807476402}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1239170734
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1239170732}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1329519118
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,7 +887,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 64
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1329519119
 Transform:
   m_ObjectHideFlags: 0
@@ -878,6 +901,34 @@ Transform:
   - {fileID: 872072410}
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1433937287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1433937288}
+  m_Layer: 0
+  m_Name: Target (red)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1433937288
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433937287}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1239170733}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1671487386
 GameObject:
@@ -1076,7 +1127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1791569931
 Transform:
   m_ObjectHideFlags: 0
@@ -1092,6 +1143,34 @@ Transform:
   - {fileID: 1175724500}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1807476401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1807476402}
+  m_Layer: 0
+  m_Name: Target (blue)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1807476402
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1807476401}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1239170733}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1890532615
 GameObject:
