@@ -185,7 +185,7 @@ public class NoiseBall2 : MonoBehaviour, ITimeControl
         _compute.SetFloat("NoiseAmplitude", _noiseAmplitude);
         _compute.SetFloat("NoiseFrequency", _noiseFrequency);
         _compute.SetVector("NoiseOffset", _noiseMotion * _time);
-        _compute.SetFloat("RandomSeed", _randomSeed * 0.172749f);
+        _compute.SetInt("RandomSeed", _randomSeed);
 
         _compute.SetBuffer(kernel, "PositionBuffer", _positionBuffer);
         _compute.SetBuffer(kernel, "NormalBuffer", _normalBuffer);

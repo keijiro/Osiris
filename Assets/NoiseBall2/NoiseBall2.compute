@@ -12,30 +12,41 @@ CBUFFER_START(Params)
     float NoiseAmplitude;
     float NoiseFrequency;
     float3 NoiseOffset;
-    float RandomSeed;
+    uint RandomSeed;
 CBUFFER_END
 
-float Random(float u, float v)
+// Hash function from H. Schechter & R. Bridson, goo.gl/RXiKaH
+uint Hash(uint s)
 {
-    float f = dot(float2(12.9898, 78.233), float2(u, v));
-    return frac(43758.5453 * sin(f));
+    s ^= 2747636419u;
+    s *= 2654435769u;
+    s ^= s >> 16;
+    s *= 2654435769u;
+    s ^= s >> 16;
+    s *= 2654435769u;
+    return s;
 }
 
-float3 RandomPoint(float id)
+float Random(uint seed)
 {
-    float u = Random(id * 0.01334, 0.3728 + RandomSeed) * UNITY_PI * 2;
-    float z = Random(0.8372 + RandomSeed, id * 0.01197) * 2 - 1;
+    return float(Hash(seed)) / 4294967295.0; // 2^32-1
+}
+
+float3 RandomPoint(uint id)
+{
+    float u = Random(id + 8289473) * UNITY_PI * 2;
+    float z = Random(id + 1238948) * 2 - 1;
     return float3(float2(cos(u), sin(u)) * sqrt(1 - z * z), z);
 }
 
 [numthreads(128, 1, 1)]
 void Update(uint id : SV_DispatchThreadID)
 {
-    int idx1 = id * 3;
-    int idx2 = id * 3 + 1;
-    int idx3 = id * 3 + 2;
+    uint idx1 = id * 3;
+    uint idx2 = id * 3 + 1;
+    uint idx3 = id * 3 + 2;
 
-    float seed = floor(Time + id * 0.1) * 0.1;
+    uint seed = RandomSeed * 139 + (uint)floor(Time + id * 0.1);
     float3 v1 = RandomPoint(idx1 + seed);
     float3 v2 = RandomPoint(idx2 + seed);
     float3 v3 = RandomPoint(idx3 + seed);
@@ -43,10 +54,10 @@ void Update(uint id : SV_DispatchThreadID)
     v2 = normalize(v1 + normalize(v2 - v1) * Extent);
     v3 = normalize(v1 + normalize(v3 - v1) * Extent);
 
-    seed = RandomSeed * 182.3488;
-    float l1 = snoise(v1 * NoiseFrequency + NoiseOffset + seed).w;
-    float l2 = snoise(v2 * NoiseFrequency + NoiseOffset + seed).w;
-    float l3 = snoise(v3 * NoiseFrequency + NoiseOffset + seed).w;
+    float3 offs = NoiseOffset + RandomSeed * 1.348887;
+    float l1 = snoise(v1 * NoiseFrequency + offs).w;
+    float l2 = snoise(v2 * NoiseFrequency + offs).w;
+    float l3 = snoise(v3 * NoiseFrequency + offs).w;
 
     l1 = abs(l1 * l1 * l1);
     l2 = abs(l2 * l2 * l2);
