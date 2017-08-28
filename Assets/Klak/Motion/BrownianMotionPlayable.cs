@@ -86,9 +86,9 @@ namespace Klak
             if (_positionAmplitude != Vector3.zero)
             {
                 var t = time * _positionFrequency;
-                var tx = _hash.Range(-1e5f, 1e5f, 0) + t;
-                var ty = _hash.Range(-1e5f, 1e5f, 1) + t;
-                var tz = _hash.Range(-1e5f, 1e5f, 2) + t;
+                var tx = _hash.Range(-1e3f, 1e3f, 0) + t;
+                var ty = _hash.Range(-1e3f, 1e3f, 1) + t;
+                var tz = _hash.Range(-1e3f, 1e3f, 2) + t;
 
                 var n = new Vector3(
                     Perlin.Fbm(tx, _positionFractalLevel),
@@ -104,9 +104,9 @@ namespace Klak
             if (_rotationAmplitude != Vector3.zero)
             {
                 var t = time * _rotationFrequency;
-                var tx = _hash.Range(-1e5f, 1e5f, 3) + t;
-                var ty = _hash.Range(-1e5f, 1e5f, 4) + t;
-                var tz = _hash.Range(-1e5f, 1e5f, 5) + t;
+                var tx = _hash.Range(-1e3f, 1e3f, 3) + t;
+                var ty = _hash.Range(-1e3f, 1e3f, 4) + t;
+                var tz = _hash.Range(-1e3f, 1e3f, 5) + t;
 
                 var n = new Vector3(
                     Perlin.Fbm(tx, _rotationFractalLevel),

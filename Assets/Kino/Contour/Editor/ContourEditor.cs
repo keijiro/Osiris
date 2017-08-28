@@ -30,7 +30,6 @@ namespace Kino
     public class ContourEditor : Editor
     {
         SerializedProperty _lineColor;
-        SerializedProperty _backgroundColor;
         SerializedProperty _lowThreshold;
         SerializedProperty _highThreshold;
         SerializedProperty _depthSensitivity;
@@ -50,7 +49,6 @@ namespace Kino
         void OnEnable()
         {
             _lineColor = serializedObject.FindProperty("_lineColor");
-            _backgroundColor = serializedObject.FindProperty("_backgroundColor");
             _lowThreshold = serializedObject.FindProperty("_lowThreshold");
             _highThreshold = serializedObject.FindProperty("_highThreshold");
             _depthSensitivity = serializedObject.FindProperty("_depthSensitivity");
@@ -63,7 +61,6 @@ namespace Kino
             serializedObject.Update();
 
             EditorGUILayout.PropertyField(_lineColor);
-            EditorGUILayout.PropertyField(_backgroundColor);
 
             EditorGUILayout.Space();
 

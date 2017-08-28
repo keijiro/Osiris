@@ -33,20 +33,12 @@ namespace Kino
 
         // Line color
         [SerializeField]
+        [ColorUsage(false, true, 0, 24, 0.125f, 3)]
         Color _lineColor = Color.black;
 
         public Color lineColor {
             get { return _lineColor; }
             set { _lineColor = value; }
-        }
-
-        // Background color
-        [SerializeField]
-        Color _backgroundColor = new Color(1, 1, 1, 0);
-
-        public Color backgroundColor {
-            get { return _backgroundColor; }
-            set { _backgroundColor = value; }
         }
 
         // Low threshold
@@ -111,6 +103,7 @@ namespace Kino
             GetComponent<Camera>().depthTextureMode |= DepthTextureMode.Depth;
         }
 
+        [ImageEffectOpaque]
         void OnRenderImage(RenderTexture source, RenderTexture destination)
         {
             if (_material == null)
@@ -120,7 +113,6 @@ namespace Kino
             }
 
             _material.SetColor("_Color", _lineColor);
-            _material.SetColor("_BgColor", _backgroundColor);
 
             var hi = Mathf.Max(_lowThreshold, _highThreshold);
             _material.SetFloat("_LowThreshold", _lowThreshold);

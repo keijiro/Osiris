@@ -24,9 +24,8 @@ Shader "Hidden/Kino/Contour"
 {
     Properties
     {
-        _MainTex ("-", 2D) = "" {}
-        _Color ("-", Color) = (0, 0, 0, 1)
-        _BgColor ("-", Color) = (1, 1, 1, 0)
+        _MainTex("", 2D) = "" {}
+        [HDR] _Color("", Color) = (0, 0, 0)
     }
 
     CGINCLUDE
@@ -42,8 +41,7 @@ Shader "Hidden/Kino/Contour"
     sampler2D_float _CameraDepthTexture;
     sampler2D _CameraGBufferTexture2;
 
-    half4 _Color;
-    half4 _BgColor;
+    half3 _Color;
 
     float _LowThreshold;
     float _HighThreshold;
@@ -112,10 +110,7 @@ Shader "Hidden/Kino/Contour"
         // thresholding
         edge = saturate((edge - _LowThreshold) / (_HighThreshold - _LowThreshold));
 
-        half4 cs = tex2D(_MainTex, i.uv);
-        half3 c0 = lerp(cs.rgb, _BgColor.rgb, _BgColor.a);
-        half3 co = lerp(c0, _Color.rgb, edge * _Color.a);
-        return half4(co, cs.a);
+        return half4(_Color * edge, edge);
     }
 
     ENDCG
