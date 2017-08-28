@@ -73,7 +73,8 @@ public class NoiseBall2 : MonoBehaviour, ITimeControl
     #region Private fields
 
     Mesh _mesh;
-    MaterialPropertyBlock _drawProps;
+    Material _tempMaterial;
+    MaterialPropertyBlock _props;
 
     ComputeBuffer _drawArgsBuffer;
     ComputeBuffer _positionBuffer;
@@ -134,6 +135,14 @@ public class NoiseBall2 : MonoBehaviour, ITimeControl
             else
                 DestroyImmediate(_mesh);
         }
+
+        if (_tempMaterial)
+        {
+            if (Application.isPlaying)
+                Destroy(_tempMaterial);
+            else
+                DestroyImmediate(_tempMaterial);
+        }
     }
 
     void LateUpdate()
@@ -183,29 +192,33 @@ public class NoiseBall2 : MonoBehaviour, ITimeControl
 
         _compute.Dispatch(kernel, ThreadGroupCount, 1, 1);
 
-        // Optional material properties.
-        if (_drawProps == null) _drawProps = new MaterialPropertyBlock();
+        // Use a cloned material to avoid issue 914787 ("Only one shadow is
+        // cast when using Graphics.DrawMeshInstancedIndirect more than one
+        // time per frame").
+        // FIXME: remove this when issue 914787 gets fixed.
+        if (_tempMaterial == null)
+            _tempMaterial = new Material(_material);
+        else
+            _tempMaterial.CopyPropertiesFromMaterial(_material);
 
-        _drawProps.SetMatrix("_LocalToWorld", transform.localToWorldMatrix);
-        _drawProps.SetMatrix("_WorldToLocal", transform.worldToLocalMatrix);
-        _drawProps.SetBuffer("_PositionBuffer", _positionBuffer);
-        _drawProps.SetBuffer("_NormalBuffer", _normalBuffer);
+        // Optional material properties.
+        if (_props == null) _props = new MaterialPropertyBlock();
+
+        _props.SetMatrix("_LocalToWorld", transform.localToWorldMatrix);
+        _props.SetMatrix("_WorldToLocal", transform.worldToLocalMatrix);
+        _props.SetBuffer("_PositionBuffer", _positionBuffer);
+        _props.SetBuffer("_NormalBuffer", _normalBuffer);
 
         // Draw
         var bounds = new Bounds(transform.position, transform.lossyScale * 5);
 
         Graphics.DrawMeshInstancedIndirect(
-            _mesh, 0, _material, bounds, _drawArgsBuffer, 0, _drawProps
+            _mesh, 0, _material, bounds, _drawArgsBuffer, 0, _props
         );
 
         // Advance the time.
-        if (!_timeControlled)
-        {
-            if (Application.isPlaying)
-                _time += Time.deltaTime;
-            else
-                _time = 1;
-        }
+        if (!_timeControlled && Application.isPlaying)
+            _time += Time.deltaTime;
     }
 
     #endregion
