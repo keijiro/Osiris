@@ -52,27 +52,16 @@ namespace Klak
         Transform _target;
         XXHash _hash;
 
-        Vector3 _initialPosition;
-        Quaternion _initialRotation;
-
         #endregion
 
         #region Playable implementation
-
-        public override void OnGraphStart(Playable playable)
-        {
-            if (_target == null) return;
-
-            _initialPosition = _target.localPosition;
-            _initialRotation = _target.localRotation;
-        }
 
         public override void OnGraphStop(Playable playable)
         {
             if (_target == null) return;
 
-            _target.localPosition = _initialPosition;
-            _target.localRotation = _initialRotation;
+            _target.localPosition = Vector3.zero;
+            _target.localRotation = Quaternion.identity;
         }
 
         public override void PrepareFrame(Playable playable, FrameData info)
@@ -98,7 +87,7 @@ namespace Klak
 
                 n = Vector3.Scale(n, _positionAmplitude) * _fbmNorm;
 
-                _target.localPosition = _initialPosition + n;
+                _target.localPosition = n;
             }
 
             if (_rotationAmplitude != Vector3.zero)
@@ -116,7 +105,7 @@ namespace Klak
 
                 n = Vector3.Scale(n, _rotationAmplitude) * _fbmNorm;
 
-                _target.localRotation = Quaternion.Euler(n) * _initialRotation;
+                _target.localRotation = Quaternion.Euler(n);
             }
         }
 

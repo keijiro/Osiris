@@ -66,7 +66,6 @@ namespace Klak
             if (transform == null) return;
 
             var go = transform.gameObject;
-            Debug.Log(go);
             driver.AddFromName<Transform>(go, "m_LocalPosition.x");
             driver.AddFromName<Transform>(go, "m_LocalPosition.y");
             driver.AddFromName<Transform>(go, "m_LocalPosition.z");

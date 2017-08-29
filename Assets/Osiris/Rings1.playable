@@ -9,14 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 337831424, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
-  m_Name: Sphere1
+  m_Name: Rings1
   m_EditorClassIdentifier: 
   m_Id: 0
   m_NextId: 0
   m_Tracks:
   - {fileID: 114252115433880956}
   - {fileID: 114989308341905614}
-  - {fileID: 114178134066923282}
+  - {fileID: 114082532026264514}
   - {fileID: 114846633771544222}
   - {fileID: 114017069013073792}
   - {fileID: 114976233969018638}
@@ -1028,6 +1028,27 @@ MonoBehaviour:
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
     m_DisplayName: ControlPlayableAsset
+--- !u!114 &114082532026264514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1544527758, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
+  m_Name: Warp
+  m_EditorClassIdentifier: 
+  m_Locked: 0
+  m_Muted: 0
+  m_Soloed: 0
+  m_Height: 0
+  m_CustomPlayableFullTypename: 
+  m_AnimClip: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children:
+  - {fileID: 114178134066923282}
+  m_Clips: []
 --- !u!114 &114159595622024204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1074,7 +1095,7 @@ MonoBehaviour:
   m_Height: 0
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
-  m_Parent: {fileID: 11400000}
+  m_Parent: {fileID: 114082532026264514}
   m_Children: []
   m_Clips:
   - m_Start: 0
@@ -1362,7 +1383,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1095772578, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
-  m_Name: Control Track
+  m_Name: Ribbons
   m_EditorClassIdentifier: 
   m_Locked: 0
   m_Muted: 0
