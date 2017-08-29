@@ -544,7 +544,7 @@ MonoBehaviour:
   m_Name: Pillars
   m_EditorClassIdentifier: 
   m_Locked: 0
-  m_Muted: 1
+  m_Muted: 0
   m_Soloed: 0
   m_Height: 0
   m_CustomPlayableFullTypename: 
@@ -628,7 +628,7 @@ MonoBehaviour:
   m_Name: Rings
   m_EditorClassIdentifier: 
   m_Locked: 0
-  m_Muted: 0
+  m_Muted: 1
   m_Soloed: 0
   m_Height: 0
   m_CustomPlayableFullTypename: 

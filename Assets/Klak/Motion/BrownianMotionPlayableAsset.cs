@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 namespace Klak
 {
     [System.Serializable]
-    public class BrownianMotionPlayableAsset : PlayableAsset
+    public class BrownianMotionPlayableAsset : PlayableAsset, IPropertyPreview
     {
         #region Editable variables
 
@@ -53,6 +54,25 @@ namespace Klak
                 );
 
             return playable;
+        }
+
+        #endregion
+
+        #region IPropertyPreview implementation
+
+        public void GatherProperties(PlayableDirector director, IPropertyCollector driver)
+        {
+            var transform = _target.Resolve(director);
+            if (transform == null) return;
+
+            var go = transform.gameObject;
+            Debug.Log(go);
+            driver.AddFromName<Transform>(go, "m_LocalPosition.x");
+            driver.AddFromName<Transform>(go, "m_LocalPosition.y");
+            driver.AddFromName<Transform>(go, "m_LocalPosition.z");
+            driver.AddFromName<Transform>(go, "m_LocalRotation.x");
+            driver.AddFromName<Transform>(go, "m_LocalRotation.y");
+            driver.AddFromName<Transform>(go, "m_LocalRotation.z");
         }
 
         #endregion
