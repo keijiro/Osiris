@@ -1429,7 +1429,7 @@ MonoBehaviour:
   _frameRate: 60
   _allowSlowDown: 1
   _codec: 0
-  _startTime: 0.05
+  _startTime: 0
   _recordLength: 16
   _shader: {fileID: 4800000, guid: a4bd3b00ad1ed53458ec6ff07694985e, type: 3}
 --- !u!1 &1748635471
