@@ -210,7 +210,7 @@ public class NoiseBall2 : MonoBehaviour, ITimeControl
         _props.SetBuffer("_NormalBuffer", _normalBuffer);
 
         // Draw
-        var bounds = new Bounds(transform.position, transform.lossyScale * 5);
+        var bounds = new Bounds(transform.position, transform.lossyScale * 10);
 
         Graphics.DrawMeshInstancedIndirect(
             _mesh, 0, _material, bounds, _drawArgsBuffer, 0, _props
