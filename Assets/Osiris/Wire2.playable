@@ -492,7 +492,7 @@ MonoBehaviour:
   m_Name: Offset
   m_EditorClassIdentifier: 
   template:
-    position: {x: 4, y: 1.5, z: 2}
+    position: {x: 3, y: 1.5, z: 2}
     rotation: {x: 0, y: 0, z: 0}
     noiseFrequency: 0.75
     noiseOctaves: 2
@@ -735,7 +735,7 @@ MonoBehaviour:
   m_Name: Offset
   m_EditorClassIdentifier: 
   template:
-    position: {x: 4, y: 1.5, z: 2}
+    position: {x: 3, y: 1.5, z: 2}
     rotation: {x: 0, y: 0, z: 0}
     noiseFrequency: 0.75
     noiseOctaves: 2
