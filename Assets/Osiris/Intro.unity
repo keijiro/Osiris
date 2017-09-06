@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 1
   m_DefaultReflectionResolution: 1024
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0.75
   m_CustomReflection: {fileID: 8900000, guid: 98fb247584517514b846f4bd079533af, type: 3}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0.75}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -321,7 +321,7 @@ MonoBehaviour:
   _noiseFrequency: 0.2
   _noiseMotion: 1
   _template: {fileID: 11400000, guid: 7a719ee1661d9da449f38224604c49e5, type: 2}
-  _scale: 0.8
+  _scale: 1.3
   _scaleRandomness: 0.8
   _randomSeed: 171
   _kernels: {fileID: 4800000, guid: ec7be90622201624cb51488b5eebbdc8, type: 3}
@@ -653,7 +653,7 @@ MonoBehaviour:
   _template: {fileID: 11400000, guid: 0900a5d741c5c9841a612681db77c73b, type: 2}
   _throttle: 0.1
   _extent: {x: 100, y: 100, z: 100}
-  _lineRadius: 0.05
+  _lineRadius: 0.04
   _lineWidth: 12
   _lineWidthRandomness: 0.5
   _speed: 100
@@ -1168,7 +1168,7 @@ MonoBehaviour:
   _noiseFrequency: 0.2
   _noiseMotion: 1
   _template: {fileID: 11400000, guid: 7a719ee1661d9da449f38224604c49e5, type: 2}
-  _scale: 0.8
+  _scale: 1.3
   _scaleRandomness: 0.8
   _randomSeed: 47
   _kernels: {fileID: 4800000, guid: ec7be90622201624cb51488b5eebbdc8, type: 3}
@@ -1452,7 +1452,7 @@ MonoBehaviour:
   _emitterCenter: {x: 0, y: 0, z: 0}
   _emitterSize: {x: 0.2, y: 0.2, z: 0.2}
   _throttle: 0.353
-  _life: 2.85
+  _life: 3.5
   _lifeRandomness: 0.6
   _initialVelocity: {x: 0, y: 0, z: 16}
   _directionSpread: 1
