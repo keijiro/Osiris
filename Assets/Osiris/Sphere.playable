@@ -235,12 +235,12 @@ AnimationClip:
         time: 0.5
         value: {x: 0.00000004471073, y: 0.000001453803, z: 0.000003948808}
         inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0.431528, y: 8.2871475, z: 0.81795716}
+        outSlope: {x: 0.57209295, y: 8.2871475, z: 0.81795716}
         tangentMode: 0
       - serializedVersion: 2
         time: 15.75
-        value: {x: 6.580802, y: 126.379, z: 12.47385}
-        inSlope: {x: 0.431528, y: 8.2871475, z: 0.81795716}
+        value: {x: 8.724418, y: 126.379, z: 12.47385}
+        inSlope: {x: 0.57209295, y: 8.2871475, z: 0.81795716}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
@@ -255,12 +255,12 @@ AnimationClip:
         time: 0.5
         value: {x: 0, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: -0.13105534, y: -0.037243757, z: 0.04272041}
+        outSlope: {x: -0.1736438, y: 0.011461995, z: 0.09448523}
         tangentMode: 0
       - serializedVersion: 2
         time: 15.75
-        value: {x: -1.998594, y: -0.5679673, z: 0.6514863}
-        inSlope: {x: -0.13105534, y: -0.037243757, z: 0.04272041}
+        value: {x: -2.648068, y: 0.17479542, z: 1.4408997}
+        inSlope: {x: -0.1736438, y: 0.011461995, z: 0.09448523}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
@@ -369,12 +369,12 @@ AnimationClip:
         time: 0.5
         value: 0
         inSlope: 0
-        outSlope: -0.13105534
+        outSlope: -0.1736438
         tangentMode: 69
       - serializedVersion: 2
         time: 15.75
-        value: -1.998594
-        inSlope: -0.13105534
+        value: -2.648068
+        inSlope: -0.1736438
         outSlope: 0
         tangentMode: 69
       m_PreInfinity: 2
@@ -391,12 +391,12 @@ AnimationClip:
         time: 0.5
         value: 0
         inSlope: 0
-        outSlope: -0.037243757
+        outSlope: 0.011461995
         tangentMode: 69
       - serializedVersion: 2
         time: 15.75
-        value: -0.5679673
-        inSlope: -0.037243757
+        value: 0.17479542
+        inSlope: 0.011461995
         outSlope: 0
         tangentMode: 69
       m_PreInfinity: 2
@@ -413,12 +413,12 @@ AnimationClip:
         time: 0.5
         value: 0
         inSlope: 0
-        outSlope: 0.04272041
+        outSlope: 0.09448523
         tangentMode: 69
       - serializedVersion: 2
         time: 15.75
-        value: 0.6514863
-        inSlope: 0.04272041
+        value: 1.4408997
+        inSlope: 0.09448523
         outSlope: 0
         tangentMode: 69
       m_PreInfinity: 2
@@ -435,12 +435,12 @@ AnimationClip:
         time: 0.5
         value: 0.00000004471073
         inSlope: 0
-        outSlope: 0.431528
+        outSlope: 0.57209295
         tangentMode: 69
       - serializedVersion: 2
         time: 15.75
-        value: 6.580802
-        inSlope: 0.431528
+        value: 8.724418
+        inSlope: 0.57209295
         outSlope: 0
         tangentMode: 69
       m_PreInfinity: 2
@@ -1612,7 +1612,7 @@ MonoBehaviour:
   m_Name: Audio Track
   m_EditorClassIdentifier: 
   m_Locked: 0
-  m_Muted: 0
+  m_Muted: 1
   m_Soloed: 0
   m_Height: 0
   m_CustomPlayableFullTypename: 
