@@ -5,7 +5,10 @@ Desktop.ini
 
 /Assets/Osiris/Audio/*.wav
 
-/Mastering
+/Mastering/*.mov
+/Mastering/*.wav
+/Mastering/Template.jpg
+
 *.mp4
 *.mov
 
