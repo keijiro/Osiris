@@ -285,6 +285,8 @@ PlayableDirector:
     value: {fileID: 709999226}
   - key: {fileID: 114003909741784156, guid: 11c10d8208ff6f0489005ce6f1dbac0a, type: 2}
     value: {fileID: 1329519118}
+  - key: {fileID: 114127201495748860, guid: 11c10d8208ff6f0489005ce6f1dbac0a, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - fda4c2d618d0e104b87ec9f30f6030f3: {fileID: 0}
@@ -425,7 +427,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 516210890}
-  m_Mesh: {fileID: 43988201401188754, guid: b8fde527e1ef29d4e99f1623ffd0cb99, type: 2}
+  m_Mesh: {fileID: 43000010280027156, guid: 4aef2d0131cb63b46bfb97fc338e3374, type: 2}
 --- !u!114 &516210893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,7 +698,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1024232089}
-  m_Mesh: {fileID: 43988201401188754, guid: b8fde527e1ef29d4e99f1623ffd0cb99, type: 2}
+  m_Mesh: {fileID: 43000010280027156, guid: 4aef2d0131cb63b46bfb97fc338e3374, type: 2}
 --- !u!114 &1024232092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4475,10 +4477,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70081bef98ab8dd459e38072395393ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _threshold: 0.7
-  _stretch: 0.7
-  _intensity: 0.5
-  _tint: {r: 0.55, g: 0.55, b: 1, a: 1}
+  _threshold: 0.85
+  _stretch: 0.75
+  _intensity: 0.9
+  _tint: {r: 0.8455882, g: 0.8455882, b: 1, a: 1}
   _shader: {fileID: 4800000, guid: 10949a53e15fb4a4589953320ecc54b6, type: 3}
 --- !u!114 &1671487394
 MonoBehaviour:

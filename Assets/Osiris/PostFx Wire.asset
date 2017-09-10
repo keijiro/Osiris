@@ -100,10 +100,10 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.24
-        threshold: 0.5
-        softKnee: 0
-        radius: 3.91
+        intensity: 0.1
+        threshold: 1
+        softKnee: 1
+        radius: 3.17
         antiFlicker: 0
       lensDirt:
         texture: {fileID: 0}
@@ -120,11 +120,11 @@ MonoBehaviour:
         neutralWhiteLevel: 5.3
         neutralWhiteClip: 10
       basic:
-        postExposure: 0.1
+        postExposure: 1.19
         temperature: 0
-        tint: 0
+        tint: 33.4
         hueShift: 0
-        saturation: 1
+        saturation: 1.058
         contrast: 1
       channelMixer:
         red: {x: 1, y: 0, z: 0}
@@ -135,12 +135,12 @@ MonoBehaviour:
         mode: 0
         log:
           slope: {r: 1, g: 1, b: 1, a: 0}
-          power: {r: 1, g: 1, b: 1, a: -0.47204968}
+          power: {r: 1, g: 1, b: 1, a: 0}
           offset: {r: 1, g: 1, b: 1, a: 0}
         linear:
-          lift: {r: 0.21067512, g: 0.07506174, b: 1, a: 0}
-          gamma: {r: 0.74574053, g: 1, b: 0.71008027, a: 0}
-          gain: {r: 1, g: 1, b: 1, a: 0}
+          lift: {r: 0.24735743, g: 0.4298586, b: 1, a: 0}
+          gamma: {r: 1, g: 0.99578726, b: 0.8232061, a: 0}
+          gain: {r: 1, g: 0.77124757, b: 0.8033757, a: 0}
       curves:
         master:
           curve:
@@ -256,7 +256,7 @@ MonoBehaviour:
             m_Curve: []
             m_PreInfinity: 2
             m_PostInfinity: 2
-            m_RotationOrder: 0
+            m_RotationOrder: 4
           m_Loop: 0
           m_ZeroValue: 0.5
           m_Range: 1
@@ -270,7 +270,7 @@ MonoBehaviour:
           m_Loop: 0
           m_ZeroValue: 0.5
           m_Range: 1
-        e_CurrentEditingCurve: 3
+        e_CurrentEditingCurve: 0
         e_CurveY: 1
         e_CurveR: 0
         e_CurveG: 0

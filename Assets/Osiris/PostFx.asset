@@ -53,7 +53,7 @@ MonoBehaviour:
     m_Enabled: 0
     m_Settings:
       reflection:
-        blendType: 0
+        blendType: 1
         reflectionQuality: 0
         maxDistance: 100
         iterationCount: 256
@@ -62,7 +62,7 @@ MonoBehaviour:
         reflectionBlur: 1
         reflectBackfaces: 0
       intensity:
-        reflectionMultiplier: 1
+        reflectionMultiplier: 1.359
         fadeDistance: 100
         fresnelFade: 1
         fresnelFadePower: 1
@@ -71,8 +71,8 @@ MonoBehaviour:
   depthOfField:
     m_Enabled: 0
     m_Settings:
-      focusDistance: 4.35
-      aperture: 1
+      focusDistance: 1.37
+      aperture: 0.1
       focalLength: 50
       useCameraFov: 1
       kernelSize: 1
@@ -100,7 +100,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.1
+        intensity: 0.075
         threshold: 1
         softKnee: 1
         radius: 7
@@ -120,11 +120,11 @@ MonoBehaviour:
         neutralWhiteLevel: 5.3
         neutralWhiteClip: 10
       basic:
-        postExposure: 1.79
-        temperature: 10
-        tint: -15
+        postExposure: 0.15
+        temperature: -8
+        tint: -5
         hueShift: 0
-        saturation: 1.02
+        saturation: 1.1
         contrast: 1
       channelMixer:
         red: {x: 1, y: 0, z: 0}
@@ -138,25 +138,25 @@ MonoBehaviour:
           power: {r: 1, g: 1, b: 1, a: 0}
           offset: {r: 1, g: 1, b: 1, a: 0}
         linear:
-          lift: {r: 0.96001077, g: 0.74594116, b: 1, a: 0}
-          gamma: {r: 1, g: 1, b: 1, a: 0}
-          gain: {r: 0.90335953, g: 1, b: 0.8067203, a: 0}
+          lift: {r: 0.53149796, g: 1, b: 0.66560435, a: 0}
+          gamma: {r: 0.731683, g: 0.8271149, b: 1, a: 0}
+          gain: {r: 0.94633687, g: 0.9654229, b: 1, a: 0}
       curves:
         master:
           curve:
             serializedVersion: 2
             m_Curve:
             - serializedVersion: 2
-              time: 0
+              time: 0.002118644
               value: 0
-              inSlope: 0.5068992
-              outSlope: 0.5068992
+              inSlope: 0.51052105
+              outSlope: 0.51052105
               tangentMode: 0
             - serializedVersion: 2
-              time: 0.8757062
+              time: 0.9322034
               value: 1
-              inSlope: 0.80207133
-              outSlope: 0.80207133
+              inSlope: 0.9213945
+              outSlope: 0.9213945
               tangentMode: 0
             m_PreInfinity: 2
             m_PostInfinity: 2
@@ -263,14 +263,26 @@ MonoBehaviour:
         lumVSsat:
           curve:
             serializedVersion: 2
-            m_Curve: []
+            m_Curve:
+            - serializedVersion: 2
+              time: 0.1440678
+              value: 0.2920354
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+            - serializedVersion: 2
+              time: 0.47033897
+              value: 0.6106194
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
             m_PreInfinity: 2
             m_PostInfinity: 2
-            m_RotationOrder: 4
+            m_RotationOrder: 0
           m_Loop: 0
           m_ZeroValue: 0.5
           m_Range: 1
-        e_CurrentEditingCurve: 0
+        e_CurrentEditingCurve: 4
         e_CurveY: 1
         e_CurveR: 0
         e_CurveG: 0
@@ -281,7 +293,7 @@ MonoBehaviour:
       lut: {fileID: 0}
       contribution: 1
   chromaticAberration:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       spectralTexture: {fileID: 0}
       intensity: 0.08
@@ -293,7 +305,7 @@ MonoBehaviour:
       size: 1
       luminanceContribution: 0.8
   vignette:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       mode: 0
       color: {r: 0, g: 0, b: 0, a: 1}
@@ -305,7 +317,7 @@ MonoBehaviour:
       opacity: 1
       rounded: 0
   dithering:
-    m_Enabled: 1
+    m_Enabled: 0
   monitors:
     currentMonitorID: 0
     refreshOnPlay: 0

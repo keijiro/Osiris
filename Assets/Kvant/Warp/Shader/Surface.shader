@@ -43,7 +43,7 @@ Shader "Kvant/Warp/Surface"
             ENDCG
         }
         CGPROGRAM
-        #pragma surface surf Standard vertex:vert nolightmap
+        #pragma surface surf Standard vertex:vert nolightmap addshadow
         #pragma target 3.0
         #include "Surface.cginc"
         ENDCG

@@ -1290,7 +1290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ffff0e474954f3a926daf865cc2eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lineColor: {r: 5.079, g: 1.7256236, b: 1.1577132, a: 1}
+  _lineColor: {r: 2, g: 0.5, b: 0.5, a: 1}
   _lowThreshold: 0.01
   _highThreshold: 0.3
   _depthSensitivity: 1
@@ -1309,9 +1309,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _threshold: 0.08
-  _stretch: 0.71
-  _intensity: 0.638
-  _tint: {r: 0.55, g: 0.55, b: 1, a: 1}
+  _stretch: 0.668
+  _intensity: 0.47
+  _tint: {r: 1, g: 1, b: 1, a: 1}
   _shader: {fileID: 4800000, guid: 10949a53e15fb4a4589953320ecc54b6, type: 3}
 --- !u!114 &1671487396
 MonoBehaviour:
