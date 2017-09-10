@@ -5,13 +5,13 @@ RenderTexture:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Quarter
+  m_Name: Mask 1
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
   m_Width: 1295
-  m_Height: 252
-  m_AntiAliasing: 1
+  m_Height: 504
+  m_AntiAliasing: 8
   m_DepthFormat: 2
   m_ColorFormat: 0
   m_MipMap: 0

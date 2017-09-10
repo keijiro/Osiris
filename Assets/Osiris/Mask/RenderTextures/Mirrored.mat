@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Quarter
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: Mirrored
+  m_Shader: {fileID: 4800000, guid: f1e3efb139e8dc941b81ae1c38439e6a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -18,6 +18,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BlendTex:
+        m_Texture: {fileID: 8400000, guid: 2dda0f31412f8f145bcd832e7f4d7ec4, type: 2}
+        m_Scale: {x: 2, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -39,8 +43,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 8400000, guid: 2dda0f31412f8f145bcd832e7f4d7ec4, type: 2}
-        m_Scale: {x: 2, y: 2}
+        m_Texture: {fileID: 8400000, guid: e935b8acb93ca4e48bcfacbfaec0cef7, type: 2}
+        m_Scale: {x: 2, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
