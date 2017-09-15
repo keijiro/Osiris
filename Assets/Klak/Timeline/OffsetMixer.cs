@@ -24,8 +24,10 @@ namespace Klak.Timeline
 
             if (_captured == null)
             {
-                _defaultPosition = target.localPosition;
-                _defaultRotation = target.localRotation;
+                //_defaultPosition = target.localPosition;
+                //_defaultRotation = target.localRotation;
+                _defaultPosition = Vector3.zero;
+                _defaultRotation = Quaternion.identity;
                 _captured = target;
             }
             else
